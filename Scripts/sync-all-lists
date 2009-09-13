@@ -1,0 +1,16 @@
+#!/bin/zsh
+
+if [ -e /var/run/sync-all-lists -a /var/run/sync-all-lists -nt /etc/register/register.xml ] ; then exit ; fi
+
+export PATH=/usr/local/register/Scripts:$PATH
+
+sync-mailing-list lundinstr "//Club[@Name='Lund']/Students/Student[contains(@MailingLists, 'lundinstr') and @Email != '']/@Email"
+sync-mailing-list lundstyr "//Club[@Name='Lund']/Students/Student[contains(@MailingLists, 'lundstyr') and @Email != '']/@Email"
+sync-mailing-list lundwebb "//Club[@Name='Lund']/Students/Student[contains(@MailingLists, 'lundwebb') and @Email != '']/@Email"
+sync-mailing-list lund "//Club[@Name='Lund']/Students/Student[@Email != '']/@Email"
+sync-mailing-list sommarlagerlund "//Club[@Name='Lund']/Students/Student[contains(MailingLists, 'sommarlagerlund') and @Email != '']/@Email"
+sync-mailing-list ci-syd "//Club/Students/Student[contains(@MailingLists, 'ci-syd') and @Email != '']/@Email"
+sync-mailing-list ci-nord "//Club/Students/Student[contains(@MailingLists, 'ci-nord') and @Email != '']/@Email"
+
+touch /var/run/sync-all-lists
+
