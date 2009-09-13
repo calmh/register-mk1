@@ -1,6 +1,7 @@
 ﻿<%@ Page Language="C#" EnableEventValidation="false" AutoEventWireup="true" CodeFile="Default.aspx.cs"
     Inherits="_Default" %>
 
+<%@ Register TagPrefix="uc1" TagName="Header" Src="Header.ascx" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -9,8 +10,9 @@
 </head>
 <body>
     <form id="form1" runat="server">
+    <uc1:Header runat="server" />
     <h1>
-        T.I.A. Registersystem</h1>
+        <%= Manager.Instance.Organization %></h1>
     <div>
         <p>
             <asp:Label ID="lMessage" runat="server" Text="" Font-Bold="true"></asp:Label></p>
@@ -22,9 +24,10 @@
             Du har tillgång till registerdata för nedanstående klubbar.
         </p>
         <asp:GridView ID="gvClubs" runat="server" AutoGenerateColumns="False" OnRowCommand="gvClubs_RowCommand"
-            BorderWidth="0" GridLines="None" CellSpacing="-1" DataKeyNames="ID" EnableViewState="false" EnableTheming="false">
+            BorderWidth="0" GridLines="None" CellSpacing="-1" DataKeyNames="ID" EnableViewState="false"
+            EnableTheming="false">
             <Columns>
-            <asp:ButtonField ButtonType="Image" ImageUrl="edit-16x16.png" CommandName="Klubb" />
+                <asp:ButtonField ButtonType="Image" ImageUrl="edit-16x16.png" CommandName="Klubb" />
                 <asp:BoundField DataField="Name" HeaderText="Klubb" />
                 <asp:BoundField DataField="TotalStudents" HeaderText="Medlemmar" />
                 <asp:BoundField DataField="ActiveStudents" HeaderText="Aktiva" />
@@ -32,10 +35,12 @@
             <RowStyle CssClass="tableRow" />
             <AlternatingRowStyle CssClass="tableAltRow" />
         </asp:GridView>
-        <p>
-            <asp:Label ID="lAdmin" runat="server" Text=""></asp:Label><br />
-            <asp:HyperLink ID="hlAdmin" runat="server"></asp:HyperLink>
-        </p>
+        <asp:Panel ID="adminPanel" runat="server">
+            <p>
+                Du har tillgång till det administrativa gränssnittet.<br />
+                <asp:HyperLink ID="hlAdmin" runat="server" NavigateUrl="AdminPage.aspx">[Gå till administration]</asp:HyperLink>
+            </p>
+        </asp:Panel>
     </div>
     <div class="section">
         <h2>

@@ -1,5 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="SendSMSMessage.aspx.cs" Inherits="SendSMSMessage" %>
 
+<%@ Register TagPrefix="uc1" TagName="Header" Src="Header.ascx" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -8,8 +9,10 @@
 </head>
 <body>
     <form id="form1" runat="server">
+    <uc1:Header runat="server" />
     <asp:Panel ID="messagePane" CssClass="section" runat="server" Visible="false">
-    <h2>SMS-meddelande</h2>
+        <h2>
+            SMS-meddelande</h2>
         <asp:Label ID="lMessage" runat="server" Text=""></asp:Label>
     </asp:Panel>
     <div class="section">
@@ -43,7 +46,7 @@
                     &nbsp;
                 </td>
                 <td class="value">
-                    <asp:Button ID="bSend" runat="server" Text="Skicka" onclick="bSend_Click" />
+                    <asp:Button ID="bSend" runat="server" Text="Skicka" OnClick="bSend_Click" />
                 </td>
             </tr>
         </table>

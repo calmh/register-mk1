@@ -1,6 +1,7 @@
 ﻿<%@ Page Language="C#" EnableEventValidation="false" AutoEventWireup="true" CodeFile="GraduationPage.aspx.cs"
     Inherits="GraduationPage" %>
 
+<%@ Register TagPrefix="uc1" TagName="Header" Src="Header.ascx" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -9,6 +10,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
+    <uc1:Header runat="server" />
     <h1>
         Hantera graderingar</h1>
     <div class="section">
@@ -80,8 +82,8 @@
                             <TitleStyle BackColor="#999999" BorderColor="Black" Font-Bold="True" />
                         </asp:Calendar>
                         <asp:TextBox ID="tbWhen" runat="server"></asp:TextBox>
-                        <asp:Button ID="lbChangeDateSelector" runat="server" 
-                            onclick="lbChangeDateSelector_Click" Text="Button" />
+                        <asp:Button ID="lbChangeDateSelector" runat="server" OnClick="lbChangeDateSelector_Click"
+                            Text="Button" />
                     </td>
                 </tr>
                 <tr>

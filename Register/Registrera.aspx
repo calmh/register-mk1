@@ -1,5 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Registrera.aspx.cs" Inherits="UserPage" %>
 
+<%@ Register TagPrefix="uc1" TagName="Header" Src="Header.ascx" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -8,9 +9,12 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <h1>Registrera persondata</h1>
+    <uc1:Header runat="server" />
+    <h1>
+        Registrera persondata</h1>
     <asp:Panel ID="messagePane" CssClass="section" runat="server" Visible="false">
-    <h2>Meddelande</h2>
+        <h2>
+            Meddelande</h2>
         <asp:Label ID="lMessage" runat="server" Text="Label"></asp:Label>
     </asp:Panel>
     <asp:Panel ID="informationPane" CssClass="section" runat="server">
@@ -106,7 +110,7 @@
                     Ditt lösenord
                 </td>
                 <td class="value">
-                    <asp:TextBox ID="tbPass1" textmode="Password" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="tbPass1" TextMode="Password" runat="server"></asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -114,7 +118,7 @@
                     Ditt lösenord (igen)
                 </td>
                 <td class="value">
-                    <asp:TextBox ID="tbPass2" textmode="Password" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="tbPass2" TextMode="Password" runat="server"></asp:TextBox>
                 </td>
             </tr>
             <tr>

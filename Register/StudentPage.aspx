@@ -1,6 +1,7 @@
 ﻿<%@ Page Language="C#" EnableEventValidation="false" AutoEventWireup="true" CodeFile="StudentPage.aspx.cs"
     Inherits="StudentPage" %>
 
+<%@ Register TagPrefix="uc1" TagName="Header" Src="Header.ascx" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -9,6 +10,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
+    <uc1:Header runat="server" />
     <h1>
         Hantera tränande</h1>
     <asp:Panel ID="messagePane" CssClass="section error" Visible="false" runat="server">
@@ -105,7 +107,7 @@
                         <asp:DropDownList ID="ddGroup" runat="server">
                         </asp:DropDownList>
                         <asp:TextBox ID="tbGroup" runat="server"></asp:TextBox>
-                        Välj existerande eller ange namn på ny grupp.                        
+                        Välj existerande eller ange namn på ny grupp.
                     </td>
                 </tr>
                 <tr>

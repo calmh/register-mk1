@@ -1,6 +1,7 @@
 ﻿<%@ Page Language="C#" EnableEventValidation="false" AutoEventWireup="true" CodeFile="PaymentPage.aspx.cs"
     Inherits="PaymentPage" %>
 
+<%@ Register TagPrefix="uc1" TagName="Header" Src="Header.ascx" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -9,6 +10,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
+    <uc1:Header runat="server" />
     <h1>
         Hantera inbetalningar</h1>
     <div class="section">
@@ -49,7 +51,8 @@
         <asp:GridView ID="gvPayments" runat="server" AutoGenerateColumns="False" OnRowCancelingEdit="gvPayments_RowCancelingEdit"
             OnRowEditing="gvPayments_RowEditing" OnRowUpdating="gvPayments_RowUpdating">
             <Columns>
-                <asp:BoundField DataField="When" DataFormatString="{0:yyyy-MM-dd}" HeaderText="Datum" ApplyFormatInEditMode="true"/>
+                <asp:BoundField DataField="When" DataFormatString="{0:yyyy-MM-dd}" HeaderText="Datum"
+                    ApplyFormatInEditMode="true" />
                 <asp:BoundField DataField="Amount" DataFormatString="{0:F2}" HeaderText="Belopp" />
                 <asp:BoundField DataField="Comment" HeaderText="Avser" />
                 <asp:CommandField EditText="Redigera" ShowEditButton="true" UpdateText="Spara" CancelText="Avbryt" />

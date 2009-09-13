@@ -8,6 +8,7 @@ using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Collections.Generic;
+using System.Xml.Serialization;
 
 /// <summary>
 /// Summary description for DataStore
@@ -27,6 +28,14 @@ public class DataStore
         {
             c.Tidy();
         }
+    }
+
+    private string _organization;
+    [XmlAttribute]
+    public string Organization
+    {
+        get { return _organization; }
+        set { _organization = value; }
     }
 
     private List<Club> _clubs;

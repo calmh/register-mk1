@@ -1,5 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="AdminPage.aspx.cs" Inherits="AdminPage" %>
 
+<%@ Register TagPrefix="uc1" TagName="Header" Src="Header.ascx" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -8,6 +9,16 @@
 </head>
 <body>
     <form id="form1" runat="server">
+    <uc1:Header runat="server" />
+    <div class="section">
+    <h2>Generella inställningar</h2>
+    <table>
+    <tr><td>Organisationsnamn:</td><td>
+        <asp:TextBox ID="lOrganization" runat="server"></asp:TextBox></td></tr>
+        <tr><td>&nbsp;</td><td>
+            <asp:Button ID="bSave" runat="server" Text="Spara inställningar" OnClick="SaveSettings" /></td></tr>
+    </table>
+    </div>
     <div class="section">
         <h2>
             Klubbrättigheter</h2>

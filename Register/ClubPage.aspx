@@ -1,6 +1,7 @@
 ﻿<%@ Page Language="C#" EnableEventValidation="false" AutoEventWireup="true" CodeFile="ClubPage.aspx.cs"
     Inherits="ClubPage" %>
 
+<%@ Register TagPrefix="uc1" TagName="Header" Src="Header.ascx" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -9,6 +10,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
+    <uc1:Header ID="Header1" runat="server" />
     <h1 class="noprint">
         Klubbsida,
         <asp:Label ID="clubName" runat="server" Text="Label"></asp:Label></h1>
@@ -57,7 +59,8 @@
             Visa elever som <i>inte</i> matchar texten
         </p>
         <p>
-            <asp:CheckBox ID="cbFilterActive" runat="server" OnCheckedChanged="cbFilterActive_CheckedChanged" AutoPostBack="true" />
+            <asp:CheckBox ID="cbFilterActive" runat="server" OnCheckedChanged="cbFilterActive_CheckedChanged"
+                AutoPostBack="true" />
             Visa endast aktiva elever
         </p>
     </div>

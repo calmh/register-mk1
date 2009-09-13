@@ -32,12 +32,7 @@ public partial class _Default : ProtectedPage
         {
             tbRealName.Text = current.RealName;
             tbLogin.Text = current.Login;
-            if (current.IsAdmin)
-            {
-                lAdmin.Text = "Du har tillgång till det administrativa gränssnittet.";
-                hlAdmin.Text = "[Gå till administration]";
-                hlAdmin.NavigateUrl = "AdminPage.aspx";
-            }
+            adminPanel.Visible = current.IsAdmin;
         }
 
         gvClubs.DataSource = clubs;

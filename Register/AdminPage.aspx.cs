@@ -22,6 +22,17 @@ public partial class AdminPage : ProtectedPage
         RefreshClubTable();
     }
 
+    private void LoadSettings()
+    {
+        lOrganization.Text = Manager.Instance.Organization;
+    }
+
+    public void SaveSettings(object sender, EventArgs e)
+    {
+        Manager.Instance.Organization = lOrganization.Text;
+        Manager.Instance.Save();
+    }
+
     private void RefreshClubTable()
     {
         gvUsers.Columns.Clear();

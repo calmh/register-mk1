@@ -77,6 +77,12 @@ public class Manager
         sw.Close();
     }
 
+    public string Organization
+    {
+        get { return _dataStore.Organization; }
+        set { _dataStore.Organization = value; }
+    }
+
     public User GetUser(string name, string passwordHash)
     {
         return _dataStore.Users.Find(delegate(User u) { return u.Login == name && u.PasswordHash == passwordHash; });
