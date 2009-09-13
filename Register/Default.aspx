@@ -27,7 +27,7 @@
             BorderWidth="0" GridLines="None" CellSpacing="-1" DataKeyNames="ID" EnableViewState="false"
             EnableTheming="false">
             <Columns>
-                <asp:ButtonField ButtonType="Image" ImageUrl="edit-16x16.png" CommandName="Klubb" />
+                <asp:ButtonField ButtonType="Image" ImageUrl="img/edit-16x16.png" CommandName="Klubb" />
                 <asp:BoundField DataField="Name" HeaderText="Klubb" />
                 <asp:BoundField DataField="TotalStudents" HeaderText="Medlemmar" />
                 <asp:BoundField DataField="ActiveStudents" HeaderText="Aktiva" />

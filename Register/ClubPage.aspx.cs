@@ -380,7 +380,7 @@ public partial class ClubPage : ProtectedPage
         CommandField cf = new CommandField();
         cf.ButtonType = ButtonType.Image;
         //cf.SelectText = "Markera";
-        cf.SelectImageUrl = "check-16x16.png";
+        cf.SelectImageUrl = "img/check-16x16.png";
         cf.ShowSelectButton = true;
         gvStudents.Columns.Add(cf);
 
@@ -391,7 +391,7 @@ public partial class ClubPage : ProtectedPage
             {
                 bf = new ButtonField();
                 bf.ButtonType = ButtonType.Image;
-                bf.ImageUrl = "edit-16x16.png";
+                bf.ImageUrl = "img/edit-16x16.png";
                 bf.Text = "Redigera";
                 bf.CommandName = "Redigera";
                 gvStudents.Columns.Add(bf);
@@ -400,7 +400,7 @@ public partial class ClubPage : ProtectedPage
             {
                 bf = new ButtonField();
                 bf.ButtonType = ButtonType.Image;
-                bf.ImageUrl = "view-16x16.png";
+                bf.ImageUrl = "img/view-16x16.png";
                 bf.Text = "Persondata";
                 bf.CommandName = "Persondata";
                 gvStudents.Columns.Add(bf);
@@ -409,7 +409,7 @@ public partial class ClubPage : ProtectedPage
             {
                 bf = new ButtonField();
                 bf.ButtonType = ButtonType.Image;
-                bf.ImageUrl = "edit-16x16.png";
+                bf.ImageUrl = "img/edit-16x16.png";
                 bf.Text = "Redigera";
                 bf.CommandName = "Gradering";
                 gvStudents.Columns.Add(bf);
@@ -418,7 +418,7 @@ public partial class ClubPage : ProtectedPage
             {
                 bf = new ButtonField();
                 bf.ButtonType = ButtonType.Image;
-                bf.ImageUrl = "edit-16x16.png";
+                bf.ImageUrl = "img/edit-16x16.png";
                 bf.Text = "Redigera";
                 bf.CommandName = "Inbetalning";
                 gvStudents.Columns.Add(bf);
