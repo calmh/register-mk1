@@ -14,9 +14,9 @@ public partial class AddGraduationPage : ProtectedPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (!VerifyUserPermission(Club.Permission.EditGraduation))
-            return;
+        VerifyUserPermission(Club.Permission.EditGraduation);
 
+        // On first load, set the date and fill defatuls
         if (!IsPostBack)
         {
             calWhen.SelectedDate = DateTime.Now;
@@ -24,6 +24,9 @@ public partial class AddGraduationPage : ProtectedPage
         }
     }
 
+    /// <summary>
+    /// Load defaults (previously filled values) for this user
+    /// </summary>
     private void FillDefaults()
     {
         User current = Manager.Instance.GetUser((Guid)Session["user"]);
@@ -34,6 +37,9 @@ public partial class AddGraduationPage : ProtectedPage
         ddGrade.SelectedIndex = selectedIndex;
     }
 
+    /// <summary>
+    /// Save defaults until next time the form is displayed
+    /// </summary>
     private void SaveDefaults()
     {
         User current = Manager.Instance.GetUser((Guid)Session["user"]);
@@ -44,8 +50,7 @@ public partial class AddGraduationPage : ProtectedPage
 
     protected void bSave_Click(object sender, EventArgs e)
     {
-        if (!VerifyUserPermission(Club.Permission.EditGraduation))
-            return;
+        VerifyUserPermission(Club.Permission.EditGraduation);
 
         Guid cId = (Guid)Session["club"];
 

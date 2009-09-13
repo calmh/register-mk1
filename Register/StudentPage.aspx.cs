@@ -13,8 +13,7 @@ public partial class StudentPage : ProtectedPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (!VerifyUserPermission(Club.Permission.View))
-            return;
+        VerifyUserPermission(Club.Permission.View);
 
         Guid uId = (Guid)Session["user"];
         lHeader.Text = "Skapa ny tränande";
@@ -93,8 +92,7 @@ public partial class StudentPage : ProtectedPage
 
     protected void bSave_Click(object sender, EventArgs e)
     {
-        if (!VerifyUserPermission(Club.Permission.EditStudents))
-            return;
+        VerifyUserPermission(Club.Permission.EditStudents);
 
         bool newStudent = false;
         Student s = null;
@@ -152,8 +150,7 @@ public partial class StudentPage : ProtectedPage
     }
     protected void bDelete_Click(object sender, EventArgs e)
     {
-        if (!VerifyUserPermission(Club.Permission.DeleteStudents))
-            return;
+        VerifyUserPermission(Club.Permission.DeleteStudents);
 
         if (Session["student"] != null && Session["club"] != null)
         {

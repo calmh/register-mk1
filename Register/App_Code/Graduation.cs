@@ -39,6 +39,7 @@ public class Graduation
     {
         get
         {
+            // FIXME: This need sto be internationalized, somehow clever.
             string[] grades = {
             "Jun. Röd",
             "Jun. Gul",

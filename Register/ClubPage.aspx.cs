@@ -16,9 +16,7 @@ public partial class ClubPage : ProtectedPage
     protected void Page_Load(object sender, EventArgs e)
     {
         VerifyHasClub();
-
-        if (!VerifyUserPermission(Club.Permission.View))
-            return;
+        VerifyUserPermission(Club.Permission.View);
 
         Session.Remove("student");
 
@@ -463,16 +461,14 @@ public partial class ClubPage : ProtectedPage
         }
         else if (args.CommandName == "Ny")
         {
-            if (!VerifyUserPermission(Club.Permission.EditStudents))
-                return;
+            VerifyUserPermission(Club.Permission.EditStudents);
 
             Session.Remove("student");
             Response.Redirect("StudentPage.aspx");
         }
         else if (args.CommandName == "SelectedAddGraduation")
         {
-            if (!VerifyUserPermission(Club.Permission.EditGraduation))
-                return;
+            VerifyUserPermission(Club.Permission.EditGraduation);
 
             Dictionary<Guid, bool> selected = (Dictionary<Guid, bool>)Session["selectedStudents"];
             if (selected != null && selected.Count > 0)
@@ -482,8 +478,7 @@ public partial class ClubPage : ProtectedPage
         }
         else if (args.CommandName == "SelectedSendMessage")
         {
-            if (!VerifyUserPermission(Club.Permission.EditStudents))
-                return;
+            VerifyUserPermission(Club.Permission.EditStudents);
 
             Dictionary<Guid, bool> selected = (Dictionary<Guid, bool>)Session["selectedStudents"];
             if (selected != null && selected.Count > 0)
@@ -542,32 +537,28 @@ public partial class ClubPage : ProtectedPage
             Guid sid = (Guid)(((GridView)gvStudents).DataKeys[int.Parse((string)e.CommandArgument)].Value);
             if (e.CommandName == "Redigera")
             {
-                if (!VerifyUserPermission(Club.Permission.EditStudents))
-                    return;
+                VerifyUserPermission(Club.Permission.EditStudents);
 
                 Session["student"] = sid;
                 Response.Redirect("StudentPage.aspx");
             }
             else if (e.CommandName == "Persondata")
             {
-                if (!VerifyUserPermission(Club.Permission.View))
-                    return;
+                VerifyUserPermission(Club.Permission.View);
 
                 Session["student"] = sid;
                 Response.Redirect("StudentPage.aspx");
             }
             else if (e.CommandName == "Inbetalning")
             {
-                if (!VerifyUserPermission(Club.Permission.EditPayment))
-                    return;
+                VerifyUserPermission(Club.Permission.EditPayment);
 
                 Session["student"] = sid;
                 Response.Redirect("PaymentPage.aspx");
             }
             else if (e.CommandName == "Gradering")
             {
-                if (!VerifyUserPermission(Club.Permission.EditGraduation))
-                    return;
+                VerifyUserPermission(Club.Permission.EditGraduation);
 
                 Session["student"] = sid;
                 Response.Redirect("GraduationPage.aspx");

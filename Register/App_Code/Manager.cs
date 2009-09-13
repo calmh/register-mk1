@@ -13,10 +13,11 @@ using System.Collections.Generic;
 using System.Security.Cryptography;
 
 /// <summary>
-/// Summary description for Manager
+/// Manages the datastore - instantiation, loading and saving.
 /// </summary>
 public class Manager
 {
+    // FIXME: This should really be in the web.config
     private const string _filename = "/etc/register/register.xml";
 
     private static Manager _instance;
@@ -90,8 +91,6 @@ public class Manager
 
     public Club[] GetClubsForUser(Guid id)
     {
-        //User user = GetUser(id);
-        //return _dataStore.Clubs.FindAll(delegate(Club c) { return user.ReadClubs.IndexOf(c.ID) >= 0 || user.WriteClubs.IndexOf(c.ID) >= 0; }).ToArray();
         List<Club> clubs = new List<Club>();
         foreach (Club c in _dataStore.Clubs) {
             if (c.GetPermission(id) >= (int)Club.Permission.View)
@@ -100,40 +99,16 @@ public class Manager
         return clubs.ToArray();
     }
 
-    //private User GetUser(string name)
-    //{
-    //    User user = _dataStore.Users.Find(delegate(User u) { return u.Login == name; });
-    //    return user;
-    //}
-
     public User GetUser(Guid id)
     {
         User user = _dataStore.Users.Find(delegate(User u) { return u.ID == id; });
         return user;
     }
 
-    //public enum PermissionEnum { None, Read, Write };
-    //public PermissionEnum GetClubPermissionForUser(Guid userId, Guid clubId)
-    //{
-    //    User user = GetUser(userId);
-    //    if (user.WriteClubs.IndexOf(clubId) >= 0)
-    //        return PermissionEnum.Write;
-    //    else if (user.ReadClubs.IndexOf(clubId) >= 0)
-    //        return PermissionEnum.Read;
-    //    else
-    //        return PermissionEnum.None;
-    //}
-
     public Club GetClub(Guid id)
     {
         return _dataStore.Clubs.Find(delegate(Club c) { return c.ID == id; });
     }
-
-    //public Student GetStudentInClub(Guid clubId, string studentId)
-    //{
-    //    Club c = GetClub(clubId);
-    //    return c.Students.Find(delegate(Student s) { return s.PersonalNumber == studentId; });
-    //}
 
     public Student GetStudentInClub(Guid clubId, Guid studentId)
     {

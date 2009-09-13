@@ -11,7 +11,7 @@ using System.Collections.Generic;
 using System.Xml.Serialization;
 
 /// <summary>
-/// Summary description for User
+/// Information about a User
 /// </summary>
 public class User
 {

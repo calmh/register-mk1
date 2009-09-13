@@ -4,7 +4,7 @@ using System.Web;
 using System.Web.UI.WebControls;
 
 /// <summary>
-/// Summary description for DisplayGuide
+/// A DisplayGuide is used to communicate how to display a certain column in a data table.
 /// </summary>
 public class DisplayGuide
 {

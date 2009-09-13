@@ -13,8 +13,7 @@ public partial class GraduationPage : ProtectedPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (!VerifyUserPermission(Club.Permission.EditGraduation))
-            return;
+        VerifyUserPermission(Club.Permission.EditGraduation);
 
         Guid uId = (Guid)Session["user"];
         Guid cId = (Guid)Session["club"];
@@ -79,8 +78,7 @@ public partial class GraduationPage : ProtectedPage
     }
     protected void bSave_Click(object sender, EventArgs e)
     {
-        if (!VerifyUserPermission(Club.Permission.EditGraduation))
-            return;
+        VerifyUserPermission(Club.Permission.EditGraduation);
 
         Guid uId = (Guid)Session["user"];
         Guid cId = (Guid)Session["club"];

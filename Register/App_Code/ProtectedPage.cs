@@ -60,8 +60,7 @@ public class ProtectedPage : System.Web.UI.Page
     /// Use only to verify what we "know" to be true.
     /// </summary>
     /// <param name="needPerm">The permission we are interested in.</param>
-    /// <returns>True if the check succeeded.</returns>
-    public bool VerifyUserPermission(Club.Permission needPerm)
+    public void VerifyUserPermission(Club.Permission needPerm)
     {
         // These checks shouldn't really be necessary, because they are probably already done.
         // Doesn't hurt to check again, though.
@@ -73,10 +72,6 @@ public class ProtectedPage : System.Web.UI.Page
         Club c = Manager.Instance.GetClub(cId);
         int p = c.GetPermission(uId);
         if ((p & (int)needPerm) != (int)needPerm)
-        {
             FailedPermissionCheck();
-            return false;
-        }
-        return true;
     }
 }

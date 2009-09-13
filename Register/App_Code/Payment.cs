@@ -10,7 +10,7 @@ using System.Web.UI.WebControls.WebParts;
 using System.Xml.Serialization;
 
 /// <summary>
-/// Summary description for Payment
+/// Information about a Payment
 /// </summary>
 public class Payment
 {

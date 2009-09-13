@@ -12,7 +12,7 @@ using System.Text.RegularExpressions;
 using System.Xml.Serialization;
 
 /// <summary>
-/// Summary description for Person
+/// Information about a Student
 /// </summary>
 [Serializable]
 public class Student

@@ -10,8 +10,7 @@ public partial class SendMessage : ProtectedPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (!VerifyUserPermission(Club.Permission.EditStudents))
-            return;
+        VerifyUserPermission(Club.Permission.EditStudents);
 
         Guid uId = (Guid)Session["user"];
 

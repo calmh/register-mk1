@@ -11,8 +11,7 @@ public partial class SendEmailMessage : ProtectedPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (!VerifyUserPermission(Club.Permission.EditStudents))
-            return;
+        VerifyUserPermission(Club.Permission.EditStudents);
 
         Guid uId = (Guid)Session["user"];
 
@@ -67,8 +66,7 @@ public partial class SendEmailMessage : ProtectedPage
 
     protected void bSend_Click(object sender, EventArgs e)
     {
-        if (!VerifyUserPermission(Club.Permission.EditStudents))
-            return;
+        VerifyUserPermission(Club.Permission.EditStudents);
 
         List<Student> recipients = (List<Student>)Session["recipients"];
         string message = "Skickar meddelande:<br/>";
