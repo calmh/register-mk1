@@ -117,49 +117,145 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AdminAccessResource1.Text" xml:space="preserve">
-    <value>You have administrative access.</value>
+  <data name="AddGraduationResource1.Text" xml:space="preserve">
+    <value>Register Graduation</value>
   </data>
-  <data name="BoundFieldResource1.HeaderText" xml:space="preserve">
-    <value>Club</value>
+  <data name="bSaveResource1.Text" xml:space="preserve">
+    <value>Register Graduation</value>
   </data>
-  <data name="BoundFieldResource2.HeaderText" xml:space="preserve">
-    <value>Students</value>
+  <data name="DateResource1.Text" xml:space="preserve">
+    <value>Date</value>
   </data>
-  <data name="BoundFieldResource3.HeaderText" xml:space="preserve">
-    <value>Active</value>
+  <data name="ExaminerResource1.Text" xml:space="preserve">
+    <value>Examiner</value>
   </data>
-  <data name="bUpdateAccountResource1.Text" xml:space="preserve">
-    <value>Update Account</value>
+  <data name="GradeResource1.Text" xml:space="preserve">
+    <value>Grade</value>
   </data>
-  <data name="ClubsBelowResource1.Text" xml:space="preserve">
-    <value>You have access to registry data for the clubs listed below.</value>
+  <data name="InstructorResource1.Text" xml:space="preserve">
+    <value>Instructor</value>
   </data>
-  <data name="ClubsResource1.Text" xml:space="preserve">
-    <value>Clubs</value>
+  <data name="ListItemResource1.Text" xml:space="preserve">
+    <value>Jun. Red</value>
   </data>
-  <data name="CurrentPasswordResource1.Text" xml:space="preserve">
-    <value>Current Password</value>
+  <data name="ListItemResource1.Value" xml:space="preserve">
+    <value>-8</value>
   </data>
-  <data name="hlAdminResource1.Text" xml:space="preserve">
-    <value>Go to Administration</value>
+  <data name="ListItemResource10.Text" xml:space="preserve">
+    <value>Red II</value>
   </data>
-  <data name="NameResource2.Text" xml:space="preserve">
-    <value>Name</value>
+  <data name="ListItemResource10.Value" xml:space="preserve">
+    <value>2</value>
   </data>
-  <data name="NewPasswordResource1.Text" xml:space="preserve">
-    <value>New Password</value>
+  <data name="ListItemResource11.Text" xml:space="preserve">
+    <value>Yellow I</value>
+  </data>
+  <data name="ListItemResource11.Value" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="ListItemResource12.Text" xml:space="preserve">
+    <value>Yellow II</value>
+  </data>
+  <data name="ListItemResource12.Value" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="ListItemResource13.Text" xml:space="preserve">
+    <value>Green I</value>
+  </data>
+  <data name="ListItemResource13.Value" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="ListItemResource14.Text" xml:space="preserve">
+    <value>Green II</value>
+  </data>
+  <data name="ListItemResource14.Value" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="ListItemResource15.Text" xml:space="preserve">
+    <value>Blue I</value>
+  </data>
+  <data name="ListItemResource15.Value" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="ListItemResource16.Text" xml:space="preserve">
+    <value>Blue II</value>
+  </data>
+  <data name="ListItemResource16.Value" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="ListItemResource17.Text" xml:space="preserve">
+    <value>Black I</value>
+  </data>
+  <data name="ListItemResource17.Value" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="ListItemResource18.Text" xml:space="preserve">
+    <value>Black II</value>
+  </data>
+  <data name="ListItemResource18.Value" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="ListItemResource19.Text" xml:space="preserve">
+    <value>Black III</value>
+  </data>
+  <data name="ListItemResource19.Value" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="ListItemResource2.Text" xml:space="preserve">
+    <value>Jun. Yellow</value>
+  </data>
+  <data name="ListItemResource2.Value" xml:space="preserve">
+    <value>-7</value>
+  </data>
+  <data name="ListItemResource20.Text" xml:space="preserve">
+    <value>Black IIII</value>
+  </data>
+  <data name="ListItemResource20.Value" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="ListItemResource3.Text" xml:space="preserve">
+    <value>Jun. Green</value>
+  </data>
+  <data name="ListItemResource3.Value" xml:space="preserve">
+    <value>-6</value>
+  </data>
+  <data name="ListItemResource4.Text" xml:space="preserve">
+    <value>Jun. Blue</value>
+  </data>
+  <data name="ListItemResource4.Value" xml:space="preserve">
+    <value>-5</value>
+  </data>
+  <data name="ListItemResource5.Text" xml:space="preserve">
+    <value>Jun. Black</value>
+  </data>
+  <data name="ListItemResource5.Value" xml:space="preserve">
+    <value>-4</value>
+  </data>
+  <data name="ListItemResource6.Text" xml:space="preserve">
+    <value>Jun. Silver I</value>
+  </data>
+  <data name="ListItemResource6.Value" xml:space="preserve">
+    <value>-3</value>
+  </data>
+  <data name="ListItemResource7.Text" xml:space="preserve">
+    <value>Jun. Silver II</value>
+  </data>
+  <data name="ListItemResource7.Value" xml:space="preserve">
+    <value>-2</value>
+  </data>
+  <data name="ListItemResource8.Text" xml:space="preserve">
+    <value>Jun. Silver III</value>
+  </data>
+  <data name="ListItemResource8.Value" xml:space="preserve">
+    <value>-1</value>
+  </data>
+  <data name="ListItemResource9.Text" xml:space="preserve">
+    <value>Red I</value>
+  </data>
+  <data name="ListItemResource9.Value" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="PageResource1.Title" xml:space="preserve">
-    <value>Start Page</value>
-  </data>
-  <data name="RepeatPasswordResource1.Text" xml:space="preserve">
-    <value>New Password (again)</value>
-  </data>
-  <data name="UserNameResource1.Text" xml:space="preserve">
-    <value>User Name</value>
-  </data>
-  <data name="YourAccountResource1.Text" xml:space="preserve">
-    <value>Your Account</value>
+    <value>Register Graduation</value>
   </data>
 </root>

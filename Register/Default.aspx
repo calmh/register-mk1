@@ -6,7 +6,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <link rel="Stylesheet" href="defaults.css" />
-    <title>Startsida</title>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -25,7 +24,7 @@
         <p>
             <asp:Localize ID="ClubsBelow" runat="server" 
                 meta:resourcekey="ClubsBelowResource1" 
-                Text="Du har tillgång till registerdata för nedanstående klubbar."></asp:Localize>
+                Text="You have access to registry data for the clubs listed below."></asp:Localize>
         </p>
         <asp:GridView ID="gvClubs" runat="server" AutoGenerateColumns="False" OnRowCommand="gvClubs_RowCommand"
             BorderWidth="0px" GridLines="None" CellSpacing="-1" DataKeyNames="ID" EnableViewState="False"
@@ -33,11 +32,11 @@
             <Columns>
                 <asp:ButtonField ButtonType="Image" ImageUrl="img/edit-16x16.png" 
                     CommandName="Klubb" meta:resourcekey="ButtonFieldResource1" />
-                <asp:BoundField DataField="Name" HeaderText="Klubb" 
+                <asp:BoundField DataField="Name" HeaderText="Club" 
                     meta:resourcekey="BoundFieldResource1" />
-                <asp:BoundField DataField="TotalStudents" HeaderText="Medlemmar" 
+                <asp:BoundField DataField="TotalStudents" HeaderText="Students" 
                     meta:resourcekey="BoundFieldResource2" />
-                <asp:BoundField DataField="ActiveStudents" HeaderText="Aktiva" 
+                <asp:BoundField DataField="ActiveStudents" HeaderText="Active" 
                     meta:resourcekey="BoundFieldResource3" />
             </Columns>
             <RowStyle CssClass="tableRow" />
@@ -48,7 +47,7 @@
             <p>
                 <asp:Localize ID="AdminAccess" runat="server" 
                     meta:resourcekey="AdminAccessResource1" 
-                    Text="Du har tillgång till det administrativa gränssnittet."></asp:Localize><br />
+                    Text="You have administrative access."></asp:Localize><br />
                 <asp:HyperLink ID="hlAdmin" runat="server" NavigateUrl="AdminPage.aspx" 
                     meta:resourcekey="hlAdminResource1">Gå till administration</asp:HyperLink>
             </p>
@@ -57,13 +56,13 @@
     <div class="section">
         <h2>
             <asp:Localize ID="YourAccount" runat="server" 
-                meta:resourcekey="YourAccountResource1" Text="Ditt konto"></asp:Localize></h2>
+                meta:resourcekey="YourAccountResource1" Text="Your Account"></asp:Localize></h2>
         <div class="form">
             <table>
                 <tr>
                     <td class="prompt">
                         <asp:Localize ID="UserName" runat="server" meta:resourcekey="UserNameResource1" 
-                            Text="Användarnamn"></asp:Localize>
+                            Text="User Name"></asp:Localize>
                     </td>
                     <td class="value">
                         <asp:TextBox ID="tbLogin" runat="server" ReadOnly="True" 
@@ -73,7 +72,7 @@
                 <tr>
                     <td class="prompt">
                         <asp:Localize ID="Name" runat="server" meta:resourcekey="NameResource2" 
-                            Text="Namn"></asp:Localize>
+                            Text="Name"></asp:Localize>
                     </td>
                     <td class="value">
                         <asp:TextBox ID="tbRealName" runat="server" 
@@ -83,7 +82,7 @@
                 <tr>
                     <td class="prompt">
                         <asp:Localize ID="NewPassword" runat="server" 
-                            meta:resourcekey="NewPasswordResource1" Text="Nytt lösenord"></asp:Localize>
+                            meta:resourcekey="NewPasswordResource1" Text="New Password"></asp:Localize>
                     </td>
                     <td class="value">
                         <asp:TextBox ID="tbPass1" runat="server" TextMode="Password" 
@@ -93,7 +92,7 @@
                 <tr>
                     <td class="prompt">
                         <asp:Localize ID="RepeatPassword" runat="server" 
-                            meta:resourcekey="RepeatPasswordResource1" Text="Nytt lösenord (igen)"></asp:Localize>
+                            meta:resourcekey="RepeatPasswordResource1" Text="New Password (again)"></asp:Localize>
                     </td>
                     <td class="value">
                         <asp:TextBox ID="tbPass2" runat="server" TextMode="Password" 
@@ -103,7 +102,7 @@
                 <tr>
                     <td class="prompt">
                         <asp:Localize ID="CurrentPassword" runat="server" 
-                            meta:resourcekey="CurrentPasswordResource1" Text="Nuvarande lösenord"></asp:Localize>
+                            meta:resourcekey="CurrentPasswordResource1" Text="Current Password"></asp:Localize>
                     </td>
                     <td class="value">
                         <asp:TextBox ID="tbPass" runat="server" TextMode="Password" 
@@ -115,7 +114,7 @@
                         &nbsp;
                     </td>
                     <td class="value">
-                        <asp:Button ID="bUpdateAccount" runat="server" Text="Uppdatera konto" 
+                        <asp:Button ID="bUpdateAccount" runat="server" Text="Update Account" 
                             OnClick="bUpdateAccount_Click" meta:resourcekey="bUpdateAccountResource1" />
                     </td>
                 </tr>
