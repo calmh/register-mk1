@@ -1,16 +1,20 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="Header.ascx.cs" Inherits="Header" %>
 <div id="topbar">
     <%= Manager.Instance.Organization %>
-    (<%= Product %>
-    <%= Version %>)
+    <i>(<%= Product %>
+        <%= Version %>)</i>
     <asp:Panel Style="display: inline" ID="loggedInPanel" runat="server" Visible="false">
-        Gå till:
-        <asp:HyperLink ID="hlStart" runat="server" NavigateUrl="Default.aspx">[Startsida]</asp:HyperLink><asp:Panel
+        |
+        <asp:Localize ID="Localize1" runat="server" Text="Go to:" meta:resourcekey="GoTo" />
+        <asp:HyperLink ID="hlStart" runat="server" NavigateUrl="Default.aspx" meta:resourcekey="StartPage">Start Page</asp:HyperLink><asp:Panel
             ID="clubPagePanel" runat="server" Style="display: inline" Visible="false">
-            <asp:HyperLink ID="hlClub" runat="server" NavigateUrl="ClubPage.aspx">[Klubbsida]</asp:HyperLink>
-        </asp:Panel>
-        Inloggad som
+            <asp:HyperLink ID="hlClub" runat="server" NavigateUrl="ClubPage.aspx">
+                <asp:Localize ID="Localize4" runat="server" Text="Club Page" meta:resourcekey="ClubPage" />
+                (<%= SelectedClub %>)</asp:HyperLink></asp:Panel>
+        |
+        <asp:Localize ID="Localize2" runat="server" Text="Logged in as:" meta:resourcekey="LoggedInAs" />
         <%= LoggedInUser %>.
-        <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LogOut">[Logga ut]</asp:LinkButton>
+        <asp:LinkButton ID="bLogOut" runat="server" OnClick="LogOut" meta:resourcekey="LogOut"
+            Text="Log out" />
     </asp:Panel>
 </div>

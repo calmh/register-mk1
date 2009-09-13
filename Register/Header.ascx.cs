@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 public partial class Header : System.Web.UI.UserControl
 {
     private User _current;
+    private Club _club;
 
     public string Version {
         get { return "v1.3.0"; }
@@ -21,6 +22,11 @@ public partial class Header : System.Web.UI.UserControl
         get { return _current.RealName; }
     }
 
+    public string SelectedClub
+    {
+        get { return _club.Name; }
+    }
+
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Session["user"] != null) {
@@ -29,7 +35,10 @@ public partial class Header : System.Web.UI.UserControl
         }
 
         if (Session["club"] != null)
+        {
+            _club = Manager.Instance.GetClub((Guid)Session["club"]);
             clubPagePanel.Visible = true;
+        }
 
         /*
             l = new Label();
