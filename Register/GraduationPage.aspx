@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" EnableEventValidation="false" AutoEventWireup="true" CodeFile="GraduationPage.aspx.cs"
-    Inherits="GraduationPage" %>
+    Inherits="GraduationPage" uiculture="auto" %>
 
 <%@ Register TagPrefix="uc1" TagName="Header" Src="Header.ascx" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
