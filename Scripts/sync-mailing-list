@@ -1,0 +1,32 @@
+#!/bin/zsh
+
+LISTNAME="$1"
+XPATH="$2"
+
+# Grab all adresses matching the xpath
+xpath -e "$XPATH" /etc/register/register.xml 2>/dev/null \
+	| grep Email= \
+	| sed "s/.*Email=\"/auto-subscribed </;s/\"$/>/" \
+	| tr A-Z a-z \
+	| sort > /tmp/register.$$
+
+# Get the current list members, that were added by this script
+list_members -f $LISTNAME | grep auto-subscribed | sort > /tmp/list.$$
+
+# Generate files with addresses to be added and removed 
+diff -du /tmp/list.$$ /tmp/register.$$ | grep -v @@ | grep -- '^+.*@' | sed "s/^+//" > /tmp/add.$$
+diff -du /tmp/list.$$ /tmp/register.$$ | grep -v @@ | grep -- '^+.*@' | sed "s/^+//;s/.*<//;s/>//" > /tmp/add-noname.$$
+diff -du /tmp/list.$$ /tmp/register.$$ | grep -v @@ | grep -- '^-.*@' | sed "s/^-//;s/.*<//;s/>//" > /tmp/del.$$
+
+# If there are changes to be done, do them
+# First, remove members who shouldn't be on the list any longer
+[ -s /tmp/del.$$ ] && remove_members -f /tmp/del.$$ $LISTNAME
+# Next, remove those we will soon add. This is because we need to update their name in order to
+# "take ownership" of the subscription.
+[ -s /tmp/add-noname.$$ ] && remove_members -f /tmp/add-noname.$$ $LISTNAME >/dev/null
+# Last, add any new members to the list
+[ -s /tmp/add.$$ ] && add_members -r /tmp/add.$$ $LISTNAME >/dev/null
+
+# Clean up
+rm -f  /tmp/list.$$ /tmp/register.$$ /tmp/del.$$ /tmp/add.$$ /tmp.add-noname.$$
+
