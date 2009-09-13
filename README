@@ -1,0 +1,16 @@
+Register
+========
+
+Register is a web application to keep track of a network of martial arts clubs.
+It is primarily written for Five Animals in Sweden, http://www.fiveforms.org/,
+but could be used for any similar organization.
+
+It is currently in Swedish, but an internationalization project is under way
+and will hopefully be completed during the fall of 2009. Register runs under
+IIS with .NET 2.0 or under Apache with mod_mono, which is our production
+platform and therefore the most tested configuration.
+
+Data is stored in a simple XML file and is cached in-memory for performance.
+This makes it easy to do database backups and integrate the information with
+other tools, such as mailing list handlers.
+
