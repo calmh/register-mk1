@@ -16,20 +16,19 @@
         </p>
     <div class="section" style="max-width: 400px">
     <h2><asp:Localize ID="IntroHeader" runat="server" 
-            meta:resourcekey="IntroHeaderResource1" Text="För tränande"></asp:Localize></h2>
+            meta:resourcekey="IntroHeaderResource1" Text="For students"></asp:Localize></h2>
     <p>
         <asp:Localize ID="IntroText" runat="server" 
-            meta:resourcekey="IntroTextResource1" 
-            Text="Om du i är tränande och vill logga in för att redigera dina personuppgifter kan du gå till sidan &lt;a href=&quot;UserPage.aspx&quot;&gt;&quot;uppdatera persondata&quot;&lt;/a&gt;"></asp:Localize>
+            meta:resourcekey="IntroTextResource1">If you are a training member in a club, you can log in to change your user data on the <a href="UserPage.aspx">update page</a>.</asp:Localize>
     </p>
     </div>
     <div class="section" style="max-width: 400px">
     <h2><asp:Localize ID="AdminHeader" runat="server" 
-            meta:resourcekey="AdminHeaderResource1" Text="För administratörer"></asp:Localize></h2>
+            meta:resourcekey="AdminHeaderResource1" Text="For administrators"></asp:Localize></h2>
     <p>
         <asp:Localize ID="AdminText" runat="server" 
             meta:resourcekey="AdminTextResource1" 
-            Text="Om du har administrativ tillgång till registret kan du ange dina uppgifter här för att logga in."></asp:Localize>
+            Text="If you are a club administrator, you can log in here with your credentials."></asp:Localize>
     
     </p>
         <table>

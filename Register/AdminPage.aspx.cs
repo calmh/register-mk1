@@ -19,6 +19,7 @@ public partial class AdminPage : ProtectedPage
             return;
         }
 
+        LoadSettings();
         RefreshClubTable();
     }
 
