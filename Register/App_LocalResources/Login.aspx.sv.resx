@@ -117,19 +117,40 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="LogOut.Text" xml:space="preserve">
-    <value>Logga ut</value>
+  <data name="AdminHeaderResource1.Text" xml:space="preserve">
+    <value>För administratörer</value>
   </data>
-  <data name="ClubPage.Text" xml:space="preserve">
-    <value>Klubbsida</value>
+  <data name="AdminTextResource1.Text" xml:space="preserve">
+    <value>Om du har administrativ tillgång till registret kan du ange dina uppgifter här för att logga in.</value>
   </data>
-  <data name="GoTo.Text" xml:space="preserve">
-    <value>Gå till:</value>
+  <data name="bLoginResource1.Text" xml:space="preserve">
+    <value>Logga in</value>
   </data>
-  <data name="StartPage.Text" xml:space="preserve">
-    <value>Startsida</value>
+  <data name="bLoginResource1.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="LoggedInAs.Text" xml:space="preserve">
-    <value>Inloggad som</value>
+  <data name="IntroHeaderResource1.Text" xml:space="preserve">
+    <value>För tränande</value>
+  </data>
+  <data name="IntroTextResource1.Text" xml:space="preserve">
+    <value>Om du i är tränande och vill logga in för att redigera dina personuppgifter kan du gå till sidan &lt;a href="UserPage.aspx"&gt;"uppdatera persondata"&lt;/a&gt;</value>
+  </data>
+  <data name="lMessageResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lMessageResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PageResource1.Title" xml:space="preserve">
+    <value>Logga in</value>
+  </data>
+  <data name="PasswordResource2.Text" xml:space="preserve">
+    <value>Lösenord</value>
+  </data>
+  <data name="UserName.Text" xml:space="preserve">
+    <value>Användardnamn</value>
+  </data>
+  <data name="LogInHeader.Text" xml:space="preserve">
+    <value>Vänligen logga in</value>
   </data>
 </root>

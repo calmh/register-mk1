@@ -117,19 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="LogOut.Text" xml:space="preserve">
-    <value>Logga ut</value>
-  </data>
   <data name="ClubPage.Text" xml:space="preserve">
-    <value>Klubbsida</value>
+    <value>Club Page</value>
   </data>
   <data name="GoTo.Text" xml:space="preserve">
-    <value>Gå till:</value>
-  </data>
-  <data name="StartPage.Text" xml:space="preserve">
-    <value>Startsida</value>
+    <value>Go to:</value>
   </data>
   <data name="LoggedInAs.Text" xml:space="preserve">
-    <value>Inloggad som</value>
+    <value>Logged in as</value>
+  </data>
+  <data name="LogOut.Text" xml:space="preserve">
+    <value>Log out</value>
+  </data>
+  <data name="StartPage.Text" xml:space="preserve">
+    <value>Start Page</value>
   </data>
 </root>

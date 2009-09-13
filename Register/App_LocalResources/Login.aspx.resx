@@ -117,19 +117,34 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="LogOut.Text" xml:space="preserve">
-    <value>Logga ut</value>
+  <data name="AdminHeaderResource1.Text" xml:space="preserve">
+    <value>For administrators</value>
   </data>
-  <data name="ClubPage.Text" xml:space="preserve">
-    <value>Klubbsida</value>
+  <data name="AdminTextResource1.Text" xml:space="preserve">
+    <value>If you are a club administrator, you can log in here with your credentials.</value>
   </data>
-  <data name="GoTo.Text" xml:space="preserve">
-    <value>Gå till:</value>
+  <data name="bLoginResource1.Text" xml:space="preserve">
+    <value>Log in</value>
   </data>
-  <data name="StartPage.Text" xml:space="preserve">
-    <value>Startsida</value>
+  <data name="IntroHeaderResource1.Text" xml:space="preserve">
+    <value>For students</value>
   </data>
-  <data name="LoggedInAs.Text" xml:space="preserve">
-    <value>Inloggad som</value>
+  <data name="IntroTextResource1.Text" xml:space="preserve">
+    <value>If you are a training member in a club, you can log in to change your user data on the &lt;a href="UserPage.aspx"&gt;update page&lt;/a&gt;.</value>
+  </data>
+  <data name="lMessageResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PageResource1.Title" xml:space="preserve">
+    <value>Log in</value>
+  </data>
+  <data name="PasswordResource2.Text" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="UserName.Text" xml:space="preserve">
+    <value>User Name</value>
+  </data>
+  <data name="LogInHeader.Text" xml:space="preserve">
+    <value>Please log in</value>
   </data>
 </root>
