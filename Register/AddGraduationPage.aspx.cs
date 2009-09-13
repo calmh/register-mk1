@@ -48,6 +48,9 @@ public partial class AddGraduationPage : ProtectedPage
         current.SetDefaultValue("Graduation", "ddGrade", ddGrade.SelectedIndex.ToString());
     }
 
+    /// <summary>
+    /// Add a new graduation to the selected student.
+    /// </summary>
     protected void bSave_Click(object sender, EventArgs e)
     {
         VerifyUserPermission(Club.Permission.EditGraduation);
