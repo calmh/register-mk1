@@ -14,7 +14,7 @@ public partial class ClubCSV : ProtectedPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (!VerifyMinimumClubPermission(Club.Permission.View))
+        if (!VerifyUserPermission(Club.Permission.View))
             return;
 
         Session.Remove("student");

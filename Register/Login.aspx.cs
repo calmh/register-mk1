@@ -5,7 +5,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Security.Cryptography;
 
-public partial class Login : ProtectedPage
+public partial class Login : Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {

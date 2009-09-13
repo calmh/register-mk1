@@ -15,7 +15,9 @@ public partial class ClubPage : ProtectedPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (!VerifyMinimumClubPermission(Club.Permission.View))
+        VerifyHasClub();
+
+        if (!VerifyUserPermission(Club.Permission.View))
             return;
 
         Session.Remove("student");
@@ -461,7 +463,7 @@ public partial class ClubPage : ProtectedPage
         }
         else if (args.CommandName == "Ny")
         {
-            if (!VerifyMinimumClubPermission(Club.Permission.EditStudents, "ClubPage.aspx"))
+            if (!VerifyUserPermission(Club.Permission.EditStudents))
                 return;
 
             Session.Remove("student");
@@ -469,7 +471,7 @@ public partial class ClubPage : ProtectedPage
         }
         else if (args.CommandName == "SelectedAddGraduation")
         {
-            if (!VerifyMinimumClubPermission(Club.Permission.EditGraduation, "ClubPage.aspx"))
+            if (!VerifyUserPermission(Club.Permission.EditGraduation))
                 return;
 
             Dictionary<Guid, bool> selected = (Dictionary<Guid, bool>)Session["selectedStudents"];
@@ -480,7 +482,7 @@ public partial class ClubPage : ProtectedPage
         }
         else if (args.CommandName == "SelectedSendMessage")
         {
-            if (!VerifyMinimumClubPermission(Club.Permission.EditStudents, "ClubPage.aspx"))
+            if (!VerifyUserPermission(Club.Permission.EditStudents))
                 return;
 
             Dictionary<Guid, bool> selected = (Dictionary<Guid, bool>)Session["selectedStudents"];
@@ -540,7 +542,7 @@ public partial class ClubPage : ProtectedPage
             Guid sid = (Guid)(((GridView)gvStudents).DataKeys[int.Parse((string)e.CommandArgument)].Value);
             if (e.CommandName == "Redigera")
             {
-                if (!VerifyMinimumClubPermission(Club.Permission.EditStudents, "ClubPage.aspx"))
+                if (!VerifyUserPermission(Club.Permission.EditStudents))
                     return;
 
                 Session["student"] = sid;
@@ -548,7 +550,7 @@ public partial class ClubPage : ProtectedPage
             }
             else if (e.CommandName == "Persondata")
             {
-                if (!VerifyMinimumClubPermission(Club.Permission.View, "ClubPage.aspx"))
+                if (!VerifyUserPermission(Club.Permission.View))
                     return;
 
                 Session["student"] = sid;
@@ -556,7 +558,7 @@ public partial class ClubPage : ProtectedPage
             }
             else if (e.CommandName == "Inbetalning")
             {
-                if (!VerifyMinimumClubPermission(Club.Permission.EditPayment, "ClubPage.aspx"))
+                if (!VerifyUserPermission(Club.Permission.EditPayment))
                     return;
 
                 Session["student"] = sid;
@@ -564,7 +566,7 @@ public partial class ClubPage : ProtectedPage
             }
             else if (e.CommandName == "Gradering")
             {
-                if (!VerifyMinimumClubPermission(Club.Permission.EditGraduation, "ClubPage.aspx"))
+                if (!VerifyUserPermission(Club.Permission.EditGraduation))
                     return;
 
                 Session["student"] = sid;

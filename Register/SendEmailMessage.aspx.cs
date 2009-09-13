@@ -11,7 +11,7 @@ public partial class SendEmailMessage : ProtectedPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (!VerifyMinimumClubPermission(Club.Permission.EditStudents, "ClubPage.aspx"))
+        if (!VerifyUserPermission(Club.Permission.EditStudents))
             return;
 
         Guid uId = (Guid)Session["user"];
@@ -67,7 +67,7 @@ public partial class SendEmailMessage : ProtectedPage
 
     protected void bSend_Click(object sender, EventArgs e)
     {
-        if (!VerifyMinimumClubPermission(Club.Permission.EditStudents, "ClubPage.aspx"))
+        if (!VerifyUserPermission(Club.Permission.EditStudents))
             return;
 
         List<Student> recipients = (List<Student>)Session["recipients"];

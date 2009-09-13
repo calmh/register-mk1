@@ -13,7 +13,7 @@ public partial class PaymentPage : ProtectedPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (!VerifyMinimumClubPermission(Club.Permission.EditPayment))
+        if (!VerifyUserPermission(Club.Permission.EditPayment))
             return;
 
         Guid uId = (Guid)Session["user"];
@@ -78,7 +78,7 @@ public partial class PaymentPage : ProtectedPage
     }
     protected void bSave_Click(object sender, EventArgs e)
     {
-        if (!VerifyMinimumClubPermission(Club.Permission.EditPayment))
+        if (!VerifyUserPermission(Club.Permission.EditPayment))
             return;
 
         Guid uId = (Guid)Session["user"];

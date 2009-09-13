@@ -21,6 +21,9 @@ public class DataStore
         _users = new List<User>();
 	}
 
+    /// <summary>
+    /// Sort the club list and recursively tidy the Clubs.
+    /// </summary>
     public void Tidy()
     {
         _clubs.Sort(delegate(Club a, Club b) { return a.Name.CompareTo(b.Name); });

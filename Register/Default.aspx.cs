@@ -12,9 +12,6 @@ public partial class _Default : ProtectedPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (!VerifyIsLoggedIn())
-            return;
-
         Session.Remove("club");
         Session.Remove("student");
 
@@ -49,9 +46,6 @@ public partial class _Default : ProtectedPage
 
     protected void bUpdateAccount_Click(object sender, EventArgs e)
     {
-        if (!VerifyIsLoggedIn())
-            return;
-
         Guid uId = (Guid)Session["user"];
         User current = Manager.Instance.GetUser(uId);
         if (Manager.ComputeHash(tbPass.Text) != current.PasswordHash)

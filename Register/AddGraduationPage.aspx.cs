@@ -14,7 +14,7 @@ public partial class AddGraduationPage : ProtectedPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (!VerifyMinimumClubPermission(Club.Permission.EditGraduation, "ClubPage.aspx"))
+        if (!VerifyUserPermission(Club.Permission.EditGraduation))
             return;
 
         if (!IsPostBack)
@@ -44,7 +44,7 @@ public partial class AddGraduationPage : ProtectedPage
 
     protected void bSave_Click(object sender, EventArgs e)
     {
-        if (!VerifyMinimumClubPermission(Club.Permission.EditGraduation))
+        if (!VerifyUserPermission(Club.Permission.EditGraduation))
             return;
 
         Guid cId = (Guid)Session["club"];

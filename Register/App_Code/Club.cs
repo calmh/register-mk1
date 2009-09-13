@@ -11,7 +11,7 @@ using System.Collections.Generic;
 using System.Xml.Serialization;
 
 /// <summary>
-/// Summary description for Club
+/// Holds data for a Club.
 /// </summary>
 public class Club
 {
@@ -22,6 +22,9 @@ public class Club
         PermissionList = new List<PermissionEntry>();
     }
 
+    /// <summary>
+    /// Sort data so that it is usefully ordered when saved to disk.
+    /// </summary>
     public void Tidy()
     {
         _students.Sort(delegate(Student a, Student b) {
@@ -37,6 +40,9 @@ public class Club
     }
 
     private string _name;
+    /// <summary>
+    /// The name of the club, likely the same as the name of the city or region it's in.
+    /// </summary>
     [XmlAttribute]
     public string Name
     {
@@ -45,6 +51,9 @@ public class Club
     }
 
     private Guid _id;
+    /// <summary>
+    /// The club's unique identifier.
+    /// </summary>
     [XmlAttribute]
     public Guid ID
     {
@@ -53,12 +62,18 @@ public class Club
     }
 
     private List<Student> _students;
+    /// <summary>
+    /// A list of students enrolled in the club.
+    /// </summary>
     public List<Student> Students
     {
         get { return _students; }
         set { _students = value; }
     }
 
+    /// <summary>
+    /// A list of groups currently in use in the club.
+    /// </summary>
     public List<string> GroupList
     {
         get
@@ -71,8 +86,16 @@ public class Club
         }
     }
 
+    /// <summary>
+    /// List of user permissions for the club.
+    /// </summary>
     public List<PermissionEntry> PermissionList;
 
+    /// <summary>
+    /// Get the permission entry (a bitfield) for the specified user.
+    /// </summary>
+    /// <param name="uId">User ID</param>
+    /// <returns>Bitfield of permissions, or zero if not found.</returns>
     public int GetPermission(Guid uId)
     {
         PermissionEntry pe = PermissionList.Find(delegate(PermissionEntry p) { return p.UserId == uId; });
@@ -82,6 +105,11 @@ public class Club
             return pe.Permissions;
     }
 
+    /// <summary>
+    /// Set a new permission entry for the specified user ID.
+    /// </summary>
+    /// <param name="uId">User ID.</param>
+    /// <param name="permissions">Permission entry (bitfield).</param>
     public void SetPermission(Guid uId, int permissions)
     {
         PermissionEntry pe = PermissionList.Find(delegate(PermissionEntry p) { return p.UserId == uId; });
@@ -98,12 +126,21 @@ public class Club
         }
     }
 
+    /// <summary>
+    /// Check if the specified user ID has the requested permission(s).
+    /// </summary>
+    /// <param name="uId">User ID.</param>
+    /// <param name="perm">Requested permissions.</param>
+    /// <returns></returns>
     public bool HasPermission(Guid uId, Permission perm)
     {
         int p = (int)perm;
         return (p & GetPermission(uId)) == p;
     }
 
+    /// <summary>
+    /// A list of all active students.
+    /// </summary>
     public int ActiveStudents
     {
         get
@@ -113,6 +150,9 @@ public class Club
         }
     }
 
+    /// <summary>
+    /// Total number of enrolled students.
+    /// </summary>
     public int TotalStudents
     {
         get

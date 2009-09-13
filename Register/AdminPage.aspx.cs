@@ -9,9 +9,6 @@ public partial class AdminPage : ProtectedPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (!VerifyIsLoggedIn())
-            return;
-
         User s = Manager.Instance.GetUser((Guid)Session["user"]);
         if (!s.IsAdmin)
         {
