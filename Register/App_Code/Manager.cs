@@ -84,6 +84,12 @@ public class Manager
         set { _dataStore.Organization = value; }
     }
 
+    public string Email
+    {
+        get { return _dataStore.Email; }
+        set { _dataStore.Email = value; }
+    }
+
     public User GetUser(string name, string passwordHash)
     {
         return _dataStore.Users.Find(delegate(User u) { return u.Login == name && u.PasswordHash == passwordHash; });

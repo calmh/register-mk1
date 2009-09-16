@@ -150,7 +150,7 @@
   <data name="NewUserResource1.Text" xml:space="preserve">
     <value>New User</value>
   </data>
-  <data name="OrganizationNameResource1.Text" xml:space="preserve">
+  <data name="OrganizationResource1.Text" xml:space="preserve">
     <value>Organization Name</value>
   </data>
   <data name="PageResource1.Title" xml:space="preserve">
@@ -170,5 +170,8 @@
   </data>
   <data name="UserPermissionsResource1.Text" xml:space="preserve">
     <value>User Permissions</value>
+  </data>
+  <data name="EmailResource1.Text" xml:space="preserve">
+    <value>Email</value>
   </data>
 </root>

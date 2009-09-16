@@ -57,7 +57,7 @@ td.sum
     }
     
     a {
-		text-decoration: none;
+		/* text-decoration: none; */
 		font-weight: bold;
 	}
 
@@ -104,7 +104,7 @@ td.sum
         padding: 4px;
     }
 
-    th a, #topbar a, .section p a
+    th a, #topbar a, .section p a, td.value a
     {
         color: #fff;
     }

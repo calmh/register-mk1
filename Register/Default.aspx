@@ -71,6 +71,15 @@
                 </tr>
                 <tr>
                     <td class="prompt">
+                        <asp:Localize ID="Email" runat="server" meta:resourcekey="EmailResource" 
+                            Text="E-mail"></asp:Localize>
+                    </td>
+                    <td class="value">
+                        <asp:TextBox ID="tbEmail" runat="server"></asp:TextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="prompt">
                         <asp:Localize ID="Name" runat="server" meta:resourcekey="NameResource2" 
                             Text="Name"></asp:Localize>
                     </td>

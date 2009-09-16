@@ -29,6 +29,14 @@ public class User
         set { _id = value; }
     }
 
+    private string _email;
+    [XmlAttribute]
+    public string Email
+    {
+        get { return _email; }
+        set { _email = value; }
+    }
+
     private string _realName;
     [XmlAttribute]
     public string RealName

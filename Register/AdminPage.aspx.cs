@@ -22,12 +22,14 @@ public partial class AdminPage : ProtectedPage
 
     private void LoadSettings()
     {
-        lOrganization.Text = Manager.Instance.Organization;
+        tbOrganization.Text = Manager.Instance.Organization;
+        tbEmail.Text = Manager.Instance.Email;
     }
 
     public void SaveSettings(object sender, EventArgs e)
     {
-        Manager.Instance.Organization = lOrganization.Text;
+        Manager.Instance.Organization = tbOrganization.Text;
+        Manager.Instance.Email = tbEmail.Text;
         Manager.Instance.Save();
     }
 

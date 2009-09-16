@@ -29,6 +29,7 @@ public partial class _Default : ProtectedPage
         {
             tbRealName.Text = current.RealName;
             tbLogin.Text = current.Login;
+            tbEmail.Text = current.Email;
             adminPanel.Visible = current.IsAdmin;
         }
 
@@ -62,6 +63,7 @@ public partial class _Default : ProtectedPage
         }
 
         current.RealName = tbRealName.Text;
+        current.Email = tbEmail.Text;
         if (tbPass1.Text != "")
             current.PasswordHash = Manager.ComputeHash(tbPass1.Text);
         Manager.Instance.Save();

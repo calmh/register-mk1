@@ -147,4 +147,7 @@
   <data name="LogInHeader.Text" xml:space="preserve">
     <value>Please log in</value>
   </data>
+  <data name="hlForgotPassword.Text" xml:space="preserve">
+    <value>I forgot my password</value>
+  </data>
 </root>

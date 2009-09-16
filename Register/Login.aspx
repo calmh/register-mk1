@@ -57,7 +57,8 @@
                 </td>
                 <td class="value">
                     <asp:Button id="bLogin" Text="Logga in" runat="server" onclick="Unnamed1_Click" 
-                        meta:resourcekey="bLoginResource1"/>
+                        meta:resourcekey="bLoginResource1"/><br />
+                        <asp:HyperLink ID="hlForgotPassword" runat="server" NavigateUrl="ForgotPassword.aspx" meta:resourcekey="hlForgotPassword" Text="I forgot my password."/>
                 </td>
             </tr>
         </table>

@@ -162,4 +162,7 @@
   <data name="YourAccountResource1.Text" xml:space="preserve">
     <value>Ditt konto</value>
   </data>
+  <data name="EmailResource1.Text" xml:space="preserve">
+    <value>Email</value>
+  </data>
 </root>

@@ -41,6 +41,14 @@ public class DataStore
         set { _organization = value; }
     }
 
+    private string _email;
+    [XmlAttribute]
+    public string Email
+    {
+        get { return _email; }
+        set { _email = value; }
+    }
+
     private List<Club> _clubs;
     public List<Club> Clubs
     {
